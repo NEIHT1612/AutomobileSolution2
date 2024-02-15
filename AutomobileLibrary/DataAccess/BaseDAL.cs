@@ -25,7 +25,7 @@ namespace AutomobileLibrary.DataAccess
                                         .SetBasePath(Directory.GetCurrentDirectory())
                                         .AddJsonFile("appsettings.json", true, true)
                                         .Build();
-            connectionString = config["ConnectionString:MyStockDB"];
+            connectionString = config["ConnectionStrings:MyStockDB"];
             return connectionString;
         }
         public void CloseConnection() => dataProvider.CloseConnection(connection);
